@@ -1,43 +1,42 @@
+/* Body style */
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
-.search-field {
-  border: none;
-  border-radius: 10px;
-  /* padding: 10px; */
-  outline: none;
-} 
-/* .search-field:hover {
-  outline: none;
-  border: none;
-} */
-.search-box {
-  border: 2px solid rgba(219, 165, 147, 0.678);
-  width: 281px;
-  border-radius: 8px;
-  /* margin: auto; */
-  /* margin-top: 30px;
-  margin-bottom: 50px; */
-  /* border-right: none; */
+.input-bg{
+  height: 80px;
+  width:100%;
 }
- /* .search-button {
-  padding: 15px;
-  border-radius: 10px;
-  margin: auto;
-} */
+
+/* Display product title */
+.product-title:hover{
+  color:#C85500; 
+}
+
+/* Display product price */
+.product-price{
+  color: #B1274D;
+}
+
+/* Display rating points */
+.rating-points{
+  color: #db952b;
+  font-weight: bold;
+}
+
+/* Display product style  */
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* border: 1px solid black; */
   text-align: center;
   width: 100%;
   margin: auto;
   align-items: center;
   justify-content: center;
 }
+
 .single-product {
-  /* background-color: #EFEFEF; */
+  background-color:#ecf0f3;
   margin: 8px;
   padding: 10px;
   transition: 0.6s;
@@ -47,21 +46,24 @@ body {
 .single-product:hover {
   box-shadow: 4px 4px 9px gray;
   border-radius: 10px;
-  border: 2px solid rgb(30, 146, 78);
-  
+  border: 1px solid rgb(238, 53, 29);
 }
+
+/* Display product image  */
 .product-image {
   width: 150px;
   height: 150px;
 }
+
+/* Display My-cart style */
 .cart {
   width: 350px;
-  /* border: 1px solid green; */
   padding: 10px;
-  box-shadow: 10px 10px 20px gray;
+  box-shadow: 10px 10px 20px rgb(19, 13, 13);
   border-radius: 5px;
   margin-right: 30px;
   position: fixed;
+  background-color: #D2F4EA;
 }
 .cart-main {
   padding-right: 30px;
@@ -80,13 +82,11 @@ body {
     margin-right: 30px;
     position: fixed;
   }
-  .cart-main {
-    padding-right: 10px;
-  }
 }
 @media only screen and (max-width: 468px) {
   #all-products {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
-}
+};
+

@@ -9,8 +9,6 @@
   <!-- external CSS file  -->
   <link rel="stylesheet" href="css/style.css" />
   <!-- Bootstrap style -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" /> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -23,6 +21,7 @@
 </head>
 
 <body class="container">
+  <!-- Site header & title here -->
   <header>
     <h1 class="text-center text-info fst-italic mt-4">American Eagle</h1>
     <h6 class="text-center text-muted">A Great Fashion House of New Era</h6>
@@ -30,21 +29,19 @@
   <hr>
   <main class="main">
     <!-- Search Field Div -->
-
-    <div class="search-box mx-auto my-4">
-      <!-- search box -->
-      <input id="input-field" class="search-field" type="text" placeholder="search products" />
-      <!-- search button -->
-      <button type="button" class="btn btn-warning rounded" data-toggle="button" aria-pressed="false" autocomplete="off"
-        id="search-btn" onclick="loadProducts()">
-        Search
-      </button>
+    <div class="input-bg rounded-3 bg-dark mb-5 position-relative">
+      <div class="input-group search-box position-absolute top-50 start-50 translate-middle w-50">
+        <input type="text" class="form-control rounded" placeholder="Search your product"
+          aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-warning rounded" type="button" id="button-addon2" onclick="loadProducts()"><i
+            class="fas fa-search"></i></button>
+      </div>
     </div>
+
     <!-- All products column -->
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="">
-          <!-- <h1></h1> -->
         </div>
       </div>
       <!--Calculation cart of right side -->
@@ -78,7 +75,7 @@
               <!-- Delivery-Charge of added cart -->
               <tr>
                 <th>Delivery-Charge:</th>
-                <td>$ <span id="delivery-charge">20</span></td>
+                <td>$ <span id="delivery-charge">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
@@ -99,7 +96,7 @@
           </table>
           <!-- My-Cart Button  -->
           <div class="parces text-center d-grid col-6 mx-auto">
-            <button class="buy-now btn btn-warning rounded-pill">Buy Now</button>
+            <button class="buy-now btn btn-warning rounded-pill fw-bold">Buy Now</button>
           </div>
         </div>
       </div>
